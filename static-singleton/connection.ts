@@ -1,8 +1,8 @@
 export default class Connection {
-    private static connection
-    private static host
-    private static username
-    private static password
+    private static connection: Connection
+    private static host = process.env.HOST || "localhost"
+    private static username = process.env.USERNAME || "root"
+    private static password = process.env.PASSWORD || "root"
 
     constructor(host: string, username: string, password: string) {
         Connection.host = host
