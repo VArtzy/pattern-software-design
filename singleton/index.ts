@@ -1,5 +1,5 @@
 import Order from './order'
-import OrderDetail from './OrderDetail'
+import OrderDetail from './orderDetail'
 
 const orderService = new Order()
 orderService.save("0001")
