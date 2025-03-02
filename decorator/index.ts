@@ -1,20 +1,24 @@
-import GoldenInventoryItem from "./goldenInventoryItem";
-import InventoryItem from "./inventoryItem";
-import IronInventoryItem from "./ironInventoryItem";
-import Shopper from "./shopper";
+import CompressionDecorator from "./compressionDecorator"
+import EncryptionDecorator from "./encryptionDecorator"
+// import fileCompressionEncryptionSource from "./fileCompressionEncryptionSource"
+// import fileCompressionSource from "./fileCompressionSource"
+import FileDataSource from "./fileDataSource"
 
-const farrel = new Shopper(`Farrel`, 100000)
+const data = `hello`
 
-const kalung = new InventoryItem(`Kalung`, 10000)
-const topi = new InventoryItem(`Topi`, 15000)
+const source = new FileDataSource(`gaji.txt`)
+source.writeData(data)
 
-const kalungBesi = new IronInventoryItem(kalung)
-const kalungBesiEmas = new GoldenInventoryItem(kalungBesi)
+//const compression = new fileCompressionSource(`gaji.txt`)
+//compression.writeData(data)
 
-const topiEmas = new GoldenInventoryItem(topi)
+//const compressedEncryption = new fileCompressionEncryptionSource(`gaji.txt`)
+//compressedEncryption.writeData(data)
 
-farrel.purchase(kalungBesiEmas)
-farrel.purchase(topiEmas)
+// compressedEncrypted !== EncryptedCompressed => new fileEncryptionCompressionSource()
 
-farrel.printStatus()
-topiEmas.print()
+const compression = new CompressionDecorator(source)
+compression.writeData(data)
+
+const compressedEncryption = new EncryptionDecorator(compression)
+compressedEncryption.writeData(data)
