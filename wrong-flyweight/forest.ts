@@ -2,7 +2,7 @@ import TreeFactory from "./TreeFactory";
 import Tree from "./tree";
 
 export default class Forest {
-    private trees: Tree[] = []
+    public trees: Tree[] = []
 
     plantTree(x: number, y: number, name: string, color: string, texture: string) {
         const type = TreeFactory.getTreeType(name, color, texture)

@@ -2,9 +2,9 @@ import TreeType from "./TreeType"
 
 /** Flyweight class (also known as Cache) */
 export default class Tree {
-    private x: number
-    private y: number
-    private type: TreeType
+    public x: number
+    public y: number
+    public type: TreeType
 
     constructor(x: number, y: number, type: TreeType) {
         this.x = x
