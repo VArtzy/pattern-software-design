@@ -2,9 +2,9 @@
 
 There are **23 design patterns** in total (23 classic Design Patterns, although at least 26 Design Patterns have been discovered to date), categorized into three groups:
 
-1. **Creational Patterns**: 5 patterns  
-2. **Structural Patterns**: 7 patterns  
-3. **Behavioral Patterns**: 11 patterns
+1. **[Practical Creational Patterns](https://github.com/VArtzy/pattern-software-design/tree/main/creational)**: 5 patterns  
+2. **[Practical Structural Patterns](https://github.com/VArtzy/pattern-software-design/tree/main/structural)**: 7 patterns  
+3. **[Practical Behavioral Patterns](https://github.com/VArtzy/pattern-software-design/tree/main/behavioral)**: 11 patterns
 
 ### **Creational Patterns**  
 These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.  
