@@ -24,4 +24,8 @@ ibox.subscribe(hartono)
 aliodas.sale(20)
 ibox.sale(10)
 
+aliodas.unsubscribe(farrel)
+
+aliodas.sale(30)
+
 hartono.printSales()
