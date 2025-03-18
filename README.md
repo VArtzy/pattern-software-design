@@ -40,3 +40,11 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 - **[Strategy](https://github.com/VArtzy/pattern-software-design/tree/main/strategy)**  
 - **[Template Method](https://github.com/VArtzy/pattern-software-design/tree/main/template-method)**  
 - **[Visitor](https://github.com/VArtzy/pattern-software-design/tree/main/visitor)**
+
+## **Reference**
+- https://refactoring.guru/design-patterns
+- https://www.youtube.com/playlist?list=PL-CtdCApEFH_yiziXrQeogYOJzCmD8XLM
+- https://www.youtube.com/watch?v=tv-_1er1mWI
+- https://www.dicoding.com/blog/design-pattern/
+- https://www.linkedin.com/learning/node-js-design-patterns
+- https://en.wikipedia.org/wiki/Software_design_pattern
