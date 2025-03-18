@@ -35,7 +35,7 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 - **[Iterator](https://github.com/VArtzy/pattern-software-design/tree/main/iterator)**  
 - **[Mediator](https://github.com/VArtzy/pattern-software-design/tree/main/mediator)**  
 - **[Memento](https://github.com/VArtzy/pattern-software-design/tree/main/memento)**  
-- **[Observer](https://github.com/VArtzy/pattern-software-design/tree/main/observer)**  
+- **[Observer](https://github.com/VArtzy/pattern-software-design/tree/main/observer)**  (Fun fact: PubSub pattern is distributed -- asynchronous and many-to-many version of observer)
 - **[State](https://github.com/VArtzy/pattern-software-design/tree/main/state)**  
 - **[Strategy](https://github.com/VArtzy/pattern-software-design/tree/main/strategy)**  
 - **[Template Method](https://github.com/VArtzy/pattern-software-design/tree/main/template-method)**  
