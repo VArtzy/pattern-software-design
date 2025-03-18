@@ -1,6 +1,15 @@
-import Component from "./component"
+import Mediator from "./mediator"
 
-export default class Participant extends Component {
+export default class Participant {
+    private name: string
+    private mediator: Mediator
+
+    constructor(name: string, mediator: Mediator) {
+        this.name = name
+        this.mediator = mediator
+        this.mediator.addParticipant(this)
+    }
+
     send(message: string) {
         console.log(`${this.name} sends: ${message}`)
         this.mediator.sendMessage(message, this)
