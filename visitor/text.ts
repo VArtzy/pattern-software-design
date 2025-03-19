@@ -9,7 +9,7 @@ export default class Text implements Element {
     }
 
     sanitaze() {
-        return this.content.replace(/<*.script>/g, "")
+        return this.content.replace(/<*.script>/g, "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;")
     }
 
     accept(visitor: Visitor): void {

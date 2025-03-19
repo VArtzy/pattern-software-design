@@ -1,1 +1,1 @@
-{"paragraph":"Hallo Dunia!"}{"image":"gambar.jpg"}{"table":"[[\"Nama\",\"Umur\"],[\"Farrel\",\"17\"],[\"Eko\",\"25\"]]"}
+{"paragraph":"Hallo Dunia! alert(&#039;XSS&amp;&#039;)"}{"image":"gambar.jpg"}{"table":"[[\"Nama\",\"Umur\"],[\"Farrel\",\"17\"],[\"Eko\",\"25\"]]"}

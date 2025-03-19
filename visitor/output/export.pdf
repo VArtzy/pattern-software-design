@@ -1,5 +1,5 @@
 1 0 obj
-<<(Hallo Dunia!)>>
+<<(Hallo Dunia! alert(&#039;XSS&amp;&#039;))>>
 endobj
 2 0 obj
 <<(gambar.jpg)>>

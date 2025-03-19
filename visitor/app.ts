@@ -3,12 +3,13 @@ import HTMLExport from "./htmlExport";
 import Image from "./image";
 import JSONExport from "./jsonExport";
 import LogExport from "./logExport";
+import MarkdownExport from "./markdownExport";
 import PDFExport from "./pdfExport";
 import Table from "./table";
 import Text from "./text";
 import XMLExport from "./xmlExport";
 
-const text = new Text("Hallo Dunia!")
+const text = new Text("Hallo Dunia! <script>alert('XSS&')</script>")
 const image = new Image("gambar.jpg")
 const table = new Table([
     ["Nama", "Umur"],
@@ -23,6 +24,7 @@ const xmlExporter = new XMLExport("output/export.xml")
 const pdfExporter = new PDFExport("output/export.pdf")
 const logExporter = new LogExport("output/export.log")
 const jsonExporter = new JSONExport("output/export.json")
+const markdownExporter = new MarkdownExport("output/export.md")
 
 for (const element of elements) {
     element.accept(htmlExporter)
@@ -30,4 +32,5 @@ for (const element of elements) {
     element.accept(pdfExporter)
     element.accept(logExporter)
     element.accept(jsonExporter)
+    element.accept(markdownExporter)
 }
