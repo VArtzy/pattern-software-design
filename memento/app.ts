@@ -1,35 +1,26 @@
-import History from "./history";
-import TextEditor from "./textEditor";
+import Command from "./command";
+import Editor from "./editor";
 
-const editor = new TextEditor()
-const history = new History()
+const editor = new Editor()
+editor.setText("Ini adalah (memento) atau snapshot pattern")
+editor.setCursor(1, 2)
+editor.setSelectionWidth(50)
+editor.print()
 
-editor.setContent("Ini adalah (memento) atau snapshot pattern")
-history.saveMemento(editor.save()) // snapshot
-console.log(editor.getContent())
+const snapshot = editor.snapshot()
 
-editor.setContent("Memento digunakan untuk snapshot state objek (originator)")
-history.saveMemento(editor.save()) // snapshot
-console.log(editor.getContent())
+editor.setText("Memento digunakan untuk snapshot state objek (originator)")
+editor.setCursor(3, 4)
+editor.setSelectionWidth(100)
+editor.print()
 
-editor.setContent("Objek snapshot bisa disimpan untuk undo/redo oleh history object (caretaker) lalu bisa diambil dan diproses originator")
-history.saveMemento(editor.save()) // snapshot
-console.log(editor.getContent())
+const command = new Command(editor, snapshot)
 
-const undoMemento = history.undo()
-if (undoMemento) {
-    editor.restore(undoMemento)
-    console.log(editor.getContent())
-}
+editor.setText("Snapshot disimpan oleh history object (caretaker) yang akan memento pakai untuk mengembalikan state originator")
+editor.setCursor(5, 6)
+editor.setSelectionWidth(25)
+editor.print()
 
-const undoMemento2 = history.undo()
-if (undoMemento2) {
-    editor.restore(undoMemento2)
-    console.log(editor.getContent())
-}
+command.undo()
 
-const redoMemento = history.redo()
-if (redoMemento) {
-    editor.restore(redoMemento)
-    console.log(editor.getContent())
-}
+editor.print()
