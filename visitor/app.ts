@@ -26,6 +26,7 @@ const logExporter = new LogExport("output/export.log")
 const jsonExporter = new JSONExport("output/export.json")
 const markdownExporter = new MarkdownExport("output/export.md")
 
+/** Visitor pattern memungkinkan element memilih fungsinya sendiri berdasarkan visitor yang diberikan */
 for (const element of elements) {
     element.accept(htmlExporter)
     element.accept(xmlExporter)
